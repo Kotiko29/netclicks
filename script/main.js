@@ -60,21 +60,6 @@ for(let i = 0; i < image.length; i++){
   
 }
 
-// document.addEventListener('mouseover', (event) => {
-//     if(event.target.closest('.tv-card__img')){
-//         console.log('Навели курсор');  
-//         event.target.src = event.target.dataset.backdrop;
-//         console.log(event.target.src)
-//     }
-// });
-
-// document.addEventListener('mouseout', (event) => {
-//     if(event.target.closest('.tv-card__img')){
-//         console.log('Убрали курсор');  
-//         console.log(event.target);
-//         console.log(event.target.src)
-//     }
-// });
 
 
 
