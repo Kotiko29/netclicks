@@ -42,11 +42,8 @@ for(let i = 0; i < image.length; i++){
 
     let imageSrc = image[i].src;// переменная с атрибутом src выбранной картинки
     let imageBackdrop = image[i].dataset.backdrop;// переменная с атрибутом data-backdrop выбранной картинки
-    // обозначаем условия
-    console.log(image[i]);
-    console.log(image[i].src);
-    console.log(image[i].dataset.backdrop);
- 
+   
+        //при наведении в атрибут src помещаем ссылку из backdrop
         image[i].addEventListener('mouseover', function(){
             image[i].src = imageBackdrop;
         })  
