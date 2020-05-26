@@ -14,7 +14,7 @@ hamburger.addEventListener('click', () => {
 
 document.addEventListener('click', (event) => {
     if(!event.target.closest('.left-menu')){
-        console.log('Клик вне меню (благодаря отрицанию)');
+        // console.log('Клик вне меню (благодаря отрицанию)');
         leftMenu.classList.remove('openMenu');
         hamburger.classList.remove('open');
     }
@@ -31,3 +31,50 @@ leftMenu.addEventListener('click', (event)=> {
     }
 
 });
+
+// Смена картинки при наведении мыши
+
+let image = document.querySelectorAll('.tv-card__img');// создаем массив с картинками
+
+
+// используем метод перебора массива с картинками 
+for(let i = 0; i < image.length; i++){
+
+    let imageSrc = image[i].src;// переменная с атрибутом src выбранной картинки
+    let imageBackdrop = image[i].dataset.backdrop;// переменная с атрибутом data-backdrop выбранной картинки
+    // обозначаем условия
+    if(imageSrc){
+        //при наведении мыши устанавливаем backdrop
+        image[i].addEventListener('mouseover', function(){
+            image[i].src = imageBackdrop;
+        })
+    } 
+    if(imageBackdrop){
+        // при отведении мыши возвращаем картинку
+        image[i].addEventListener('mouseout', function(){
+            image[i].src = imageSrc;
+        })
+    }
+
+
+  
+}
+
+// document.addEventListener('mouseover', (event) => {
+//     if(event.target.closest('.tv-card__img')){
+//         console.log('Навели курсор');  
+//         event.target.src = event.target.dataset.backdrop;
+//         console.log(event.target.src)
+//     }
+// });
+
+// document.addEventListener('mouseout', (event) => {
+//     if(event.target.closest('.tv-card__img')){
+//         console.log('Убрали курсор');  
+//         console.log(event.target);
+//         console.log(event.target.src)
+//     }
+// });
+
+
+
