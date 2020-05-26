@@ -43,21 +43,18 @@ for(let i = 0; i < image.length; i++){
     let imageSrc = image[i].src;// переменная с атрибутом src выбранной картинки
     let imageBackdrop = image[i].dataset.backdrop;// переменная с атрибутом data-backdrop выбранной картинки
     // обозначаем условия
-    if(imageSrc){
-        //при наведении мыши устанавливаем backdrop
+    console.log(image[i]);
+    console.log(image[i].src);
+    console.log(image[i].dataset.backdrop);
+ 
         image[i].addEventListener('mouseover', function(){
             image[i].src = imageBackdrop;
-        })
-    } 
-    if(imageBackdrop){
+        })  
+
         // при отведении мыши возвращаем картинку
         image[i].addEventListener('mouseout', function(){
             image[i].src = imageSrc;
-        })
-    }
-
-
-  
+        })  
 }
 
 
